@@ -1,0 +1,4 @@
+package com.es.segurosinseguros.Exception;
+
+public class ErrorMessageForClient extends RuntimeException{
+}
