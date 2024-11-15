@@ -2,22 +2,37 @@ package com.es.segurosinseguros.Controller;
 
 import com.es.segurosinseguros.DTO.SeguroDTO;
 import com.es.segurosinseguros.Exception.BadRequest;
+import com.es.segurosinseguros.Service.SeguroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/seguro")
 public class SeguroController {
-    @Autowired
+    private final SeguroService seguroService;
 
-    @GetMapping("/{id}")
+    public SeguroController(SeguroService seguroService) {
+        this.seguroService = seguroService;
+    }
+    /*@GetMapping("/{id}")
     public ResponseEntity<SeguroDTO> getById(@PathVariable String id) {
         if(id==null){
             throw new BadRequest("El id no puede ser nulo");
         }
 
         return null;
+    }*/
+
+    @GetMapping("/")
+    public ResponseEntity<List<SeguroDTO>> getAll(){
+        return ResponseEntity.ok(seguroService.getAll());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<SeguroDTO> getById(@PathVariable Long id){
+        return ResponseEntity.ok(seguroService.getById(id));
+    }
 }
