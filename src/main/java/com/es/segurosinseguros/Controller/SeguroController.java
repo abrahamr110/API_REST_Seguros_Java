@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/seguro")
+@RequestMapping("/seguros")
 public class SeguroController {
     private final SeguroService seguroService;
 
@@ -34,5 +34,10 @@ public class SeguroController {
     @GetMapping("/{id}")
     public ResponseEntity<SeguroDTO> getById(@PathVariable Long id){
         return ResponseEntity.ok(seguroService.getById(id));
+    }
+
+    @PostMapping("/")
+    public ResponseEntity<SeguroDTO> addSeguro(@RequestBody SeguroDTO seguroDTO){
+        return ResponseEntity.ok(seguroService.addSeguro(seguroDTO));
     }
 }

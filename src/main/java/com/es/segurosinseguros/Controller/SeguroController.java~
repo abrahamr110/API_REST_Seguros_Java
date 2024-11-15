@@ -7,8 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/seguro")
+@RequestMapping("/seguros")
 public class SeguroController {
     private final SeguroService seguroService;
 
@@ -25,12 +27,17 @@ public class SeguroController {
     }*/
 
     @GetMapping("/")
-    public ResponseEntity<SeguroDTO> getAll(){
+    public ResponseEntity<List<SeguroDTO>> getAll(){
         return ResponseEntity.ok(seguroService.getAll());
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<SeguroDTO> getById(@PathVariable Long id){
         return ResponseEntity.ok(seguroService.getById(id));
+    }
+
+    @PostMapping("/")
+    public ResponseEntity<SeguroDTO> addSeguro(@RequestBody SeguroDTO seguroDTO){
+        return ResponseEntity.ok(seguroService.addSeguro())
     }
 }
