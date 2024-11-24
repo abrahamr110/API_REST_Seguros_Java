@@ -38,7 +38,7 @@ public class SeguroController {
 
     @PostMapping("/")
     public ResponseEntity<SeguroDTO> addSeguro(@RequestBody SeguroDTO seguroDTO){
-        return ResponseEntity.ok(seguroService.addSeguro(seguroDTO));
+        return ResponseEntity.created(null).body(seguroService.addSeguro(seguroDTO));
     }
 
     @PutMapping("/{id}")
@@ -48,6 +48,6 @@ public class SeguroController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<SeguroDTO> deleteSeguro(@PathVariable Long id){
-        return ResponseEntity.ok(seguroService.deleteSeguro(id));
+        return ResponseEntity.noContent().build();
     }
 }

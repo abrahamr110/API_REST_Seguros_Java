@@ -1,5 +1,7 @@
 package com.es.segurosinseguros.DTO;
 
+import com.es.segurosinseguros.Entities.Seguro;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -11,6 +13,7 @@ public class AsistenciaMedicaDTO {
     private LocalDate fecha;
     private LocalTime hora;
     private double importe;
+
 
     public String getBreveDescripcion() {
         return breveDescripcion;
@@ -67,4 +70,5 @@ public class AsistenciaMedicaDTO {
     public void setImporte(double importe) {
         this.importe = importe;
     }
+
 }

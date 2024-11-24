@@ -16,7 +16,7 @@ public class SeguroService {
     @Autowired
     private final SeguroRepository seguroRepository;
     @Autowired
-    private  final AsistenciaMedicaRepository asistenciaMedicaRepository;
+    private final AsistenciaMedicaRepository asistenciaMedicaRepository;
     private final Date fechaActual;
 
     public SeguroService(SeguroRepository seguroRepository, Date fechaActual,AsistenciaMedicaRepository asistenciaMedicaRepository) {
