@@ -88,11 +88,11 @@ public class SeguroService {
 
     public SeguroDTO deleteSeguro(Long id){
         AsistenciaMedica asistenciaMedica=asistenciaMedicaRepository.findById(id).orElse(null);
-
+        
         Seguro seguro=seguroRepository.findById(id).orElse(null);
         seguroRepository.delete(seguro);
 
-        if(seguro.getIdSeguro().equals(asistenciaMedica.getSeguro().getIdSeguro())){
+        if(seguro.getIdSeguro()==asistenciaMedica.getSeguro().getIdSeguro()){
             asistenciaMedicaRepository.delete(asistenciaMedica);
         }
 

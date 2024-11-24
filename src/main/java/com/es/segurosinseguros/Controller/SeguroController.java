@@ -40,4 +40,14 @@ public class SeguroController {
     public ResponseEntity<SeguroDTO> addSeguro(@RequestBody SeguroDTO seguroDTO){
         return ResponseEntity.ok(seguroService.addSeguro(seguroDTO));
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<SeguroDTO> updateSeguro(@RequestBody SeguroDTO seguroDTO, @PathVariable Long id){
+        return ResponseEntity.ok(seguroService.updateSeguro(id, seguroDTO));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<SeguroDTO> deleteSeguro(@PathVariable Long id){
+        return ResponseEntity.ok(seguroService.deleteSeguro(id));
+    }
 }
