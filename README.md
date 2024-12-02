@@ -250,6 +250,7 @@ realizar peticiones a los endpoints protegidos.
    - Cada usuario debe tener un rol:
       - `USER`: Tienen privilegios de tipo USER
       - `ADMIN`: Tienen privilegios de tipo ADMIN
+   - Se deben tener en cuenta las posibles excepciones que puedan ocasionarse tanto al realizar el login como al realizar el registro de un nuevo usuario.
 
 2. **Autenticación mediante JWT**:
    - Los usuarios deben autenticarse mediante el endpoint `POST /login`, enviando su nombre y contraseña.
