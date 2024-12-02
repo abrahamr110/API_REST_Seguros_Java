@@ -310,3 +310,25 @@ realizar peticiones a los endpoints protegidos.
 4. **Documentación:**
    - Esquema de la base de datos.
    - Descripción de los endpoints disponibles.
+
+### RESULTADOS DE APRENDIZAJE IMPLICADOS
+
+#### *6.* Desarrolla aplicaciones de acceso a almacenes de datos, aplicando medidas para mantener la seguridad y la integridad de la información.
+
+#### *7.* Desarrolla servicios Web analizando su funcionamiento e implantando la estructura de sus componentes.
+
+#### *8.* Genera páginas Web dinámicas analizando y utilizando tecnologías del servidor Web que añadan código al lenguaje de marcas.
+
+#### *9.* Desarrolla aplicaciones Web híbridas seleccionando y utilizando librerías de código y repositorios heterogéneos de información.
+
+
+
+
+
+
+
+
+
+
+
+
