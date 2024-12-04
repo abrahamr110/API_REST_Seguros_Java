@@ -68,7 +68,7 @@ public class AsistenciaMedicaService {
         return allAsistenciasMedicasDto;
     }
 
-    public AsistenciaMedicaDTO deleteAsistenciaMedica(Long idAsistencia) {
+    public AsistenciaMedicaDTO deleteById(Long idAsistencia) {
         AsistenciaMedica asistenciaMedica = asistenciaMedicaRepository.findById(idAsistencia).orElse(null);
         asistenciaMedicaRepository.delete(asistenciaMedica);
         return mapToDto(asistenciaMedica);

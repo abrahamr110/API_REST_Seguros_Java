@@ -7,6 +7,7 @@ import java.util.Date;
 
 @Configuration
 public class AppConfig {
+
     @Bean
     public Date currentDate() {
         return new Date();
