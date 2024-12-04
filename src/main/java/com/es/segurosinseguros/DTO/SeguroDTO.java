@@ -1,6 +1,7 @@
-package com.es.segurosinseguros.DTO;
+package com.es.segurosinseguros.dto;
 
 public class SeguroDTO {
+
     private String nif;
     private String nombre;
     private String ape1;
@@ -10,6 +11,21 @@ public class SeguroDTO {
     private String sexo;
     private boolean casado;
     private boolean embarazada;
+    // Getters y setters
+
+    public SeguroDTO(){}
+
+    public SeguroDTO(String nif, String nombre, String ape1, String ape2, int edad, int numHijos, String sexo, boolean casado, boolean embarazada) {
+        this.nif = nif;
+        this.nombre = nombre;
+        this.ape1 = ape1;
+        this.ape2 = ape2;
+        this.edad = edad;
+        this.numHijos = numHijos;
+        this.sexo = sexo;
+        this.casado = casado;
+        this.embarazada = embarazada;
+    }
 
     public String getNif() {
         return nif;
@@ -59,6 +75,14 @@ public class SeguroDTO {
         this.numHijos = numHijos;
     }
 
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
     public boolean isCasado() {
         return casado;
     }
@@ -73,13 +97,5 @@ public class SeguroDTO {
 
     public void setEmbarazada(boolean embarazada) {
         this.embarazada = embarazada;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
     }
 }
